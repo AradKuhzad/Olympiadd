@@ -1,0 +1,80 @@
+<!--آراد کوه زاد-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <h1>مدیریت سفارش</h1>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="جستجو محصول">
+
+      <select id="filter">
+        <option value="All">همه وضعیت ها</option>
+        <option value="Pending">انتظار</option>
+        <option value="Processing">در حال پردازش</option>
+        <option value="Delivered">تحویل داده شده</option>
+        <option value="Cancelled">لغو شده</option>
+      </select>
+
+      <select id="sort">
+        <option value="">مرتب سازی بر اساس</option>
+        <option value="price">قیمت</option>
+        <option value="date">تاریخ</option>
+        <option value="customer">مشتری</option>
+      </select>
+
+      <button id="addBtn">اضافه کردن محصول</button>
+    </div>
+
+    <form id="orderForm" class="hidden">
+
+      <h2 id="formTitle">اضافه کردن محصول</h2>
+
+      <input type="text" id="customer" placeholder="نام مشتری" required>
+      <input type="text" id="product" placeholder="نام محصول" required>
+      <input type="number" id="quantity" placeholder="مقدار" min="1" required>
+      <input type="number" id="price" placeholder="قیمت" min="0" required>
+      <input type="date" id="date" required>
+
+      <select id="status">
+        <option value="Pending">انتظار</option>
+        <option value="Processing">درحال پردازش</option>
+        <option value="Delivered">تحویل داده شده</option>
+        <option value="Cancelled">لغو شده</option>
+      </select>
+
+      <button type="submit">ذخیره</button>
+      <button type="button" id="cancelBtn">لغو</button>
+
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>شناسه</th>
+          <th>مشتری</th>
+          <th>محصول</th>
+          <th>مقدار</th>
+          <th>قیمت</th>
+          <th>وضعیت</th>
+          <th>تاریخ</th>
+        </tr>
+      </thead>
+
+      <tbody id="ordersTable"></tbody>
+    </table>
+
+    <p id="message"></p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
