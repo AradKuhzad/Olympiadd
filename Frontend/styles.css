@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Parasto';
+    src: url(../Fonts/Parastoo-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Parasto', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.container tr {
+    display: flex;
+    flex-direction: row;
+    border-bottom: #000 solid 1px;
+}
+
+.container th {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-right: #000 solid 1px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input {
+  min-width: 0;
+}
+
+button {
+  cursor: pointer;
+  background: #222;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: #444;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+ /* padding: 12px;
+  border-bottom: 1px solid #ddd;*/
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-right: #000 solid 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+#orderForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+#orderForm.hidden {
+  display: none;
+}
+
+#orderForm h2 {
+  width: 100%;
+}
+
+.edit {
+  background: #2563eb;
+}
+
+#message {
+  margin-top: 20px;
+}
+
